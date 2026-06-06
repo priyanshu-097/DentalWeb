@@ -1,0 +1,258 @@
+/* ─── Services Page Styles ─────────────────────────────── */
+
+.services-full-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.service-full-card {
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--border-radius-lg);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-full-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(47,192,201,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.service-full-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+  border-color: rgba(47,192,201,0.25);
+}
+
+.service-full-icon {
+  font-size: 40px;
+  width: 72px;
+  height: 72px;
+  background: var(--primary-ultra-light);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.service-full-card:hover .service-full-icon {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  transform: scale(1.05) rotate(-5deg);
+}
+
+.service-full-body { flex: 1; display: flex; flex-direction: column; gap: 10px; }
+
+.service-full-tag {
+  display: inline-block;
+  background: var(--primary-ultra-light);
+  color: var(--primary-dark);
+  border: 1px solid rgba(47,192,201,0.2);
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: fit-content;
+}
+
+.service-full-body h3 {
+  font-size: 1.25rem;
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.service-full-body p {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.service-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 0;
+  border-top: 1px solid var(--gray-100);
+  border-bottom: 1px solid var(--gray-100);
+  flex: 1;
+}
+
+.service-features li {
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.service-features li::before {
+  content: '→';
+  color: var(--primary);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.service-book-btn {
+  margin-top: 4px;
+  align-self: flex-start;
+}
+
+/* ─── Sterilization Section ──────────────────────────────── */
+.sterilization-section {
+  background: var(--gray-50);
+}
+
+.sterilization-card {
+  background: var(--dark);
+  border-radius: var(--border-radius-xl);
+  padding: 56px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 60px;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.sterilization-card::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(47,192,201,0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.sterilization-icon-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sterile-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sterile-step {
+  font-size: 28px;
+  width: 52px;
+  height: 52px;
+  background: rgba(47,192,201,0.1);
+  border: 1px solid rgba(47,192,201,0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.sterilization-card:hover .sterile-step {
+  background: rgba(47,192,201,0.2);
+}
+
+.sterile-badge {
+  position: absolute;
+  bottom: -10px;
+  right: -20px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 900;
+  font-family: var(--font-heading);
+  box-shadow: var(--shadow-primary);
+}
+
+.sterilization-content h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.sterilization-content > p {
+  color: rgba(255,255,255,0.65);
+  font-size: 0.92rem;
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+.sterile-steps-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sterile-step-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.75);
+}
+
+.sterile-step-item span {
+  width: 22px;
+  height: 22px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+}
+
+/* ─── CTA section ──────────────────────────────────────── */
+.services-cta {
+  background: var(--white);
+}
+
+.services-cta h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .services-full-grid { grid-template-columns: repeat(2, 1fr); }
+  .sterilization-card { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+  .sterile-steps { flex-direction: row; justify-content: center; }
+  .sterilization-icon-wrap { justify-content: center; }
+  .sterile-badge { bottom: -16px; right: 50%; transform: translateX(50%); }
+}
+
+@media (max-width: 768px) {
+  .services-full-grid { grid-template-columns: 1fr; }
+  .sterilization-card { padding: 32px 24px; }
+  .service-full-card { padding: 24px 20px; }
+}

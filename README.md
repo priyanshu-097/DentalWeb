@@ -1,4 +1,4 @@
-# 🦷 LOL Dental by Dr. Sparsh — Full-Stack Dental Clinic Website
+# 🦷 LOL Dental by Dr. AK Jain — Full-Stack Dental Clinic Website
 
 A complete, production-ready dental clinic website with a Node.js/Express backend, MongoDB database, JWT admin authentication, Nodemailer email confirmations, and Twilio WhatsApp notifications.
 
